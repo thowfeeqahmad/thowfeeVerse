@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Sparkles, Rocket, Zap } from 'lucide-react';
+import { Sparkles, Rocket, Zap } from 'lucide-react';
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -9,7 +9,6 @@ const Hero = () => {
     'Web Developer',
     'Data Analyst', 
     'Graphic Designer',
-    'CEO of Tagit Creations',
     'Entrepreneur',
     'Visionary'
   ];
@@ -77,7 +76,7 @@ const Hero = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-orbitron font-bold mb-6"
           >
             <span className="text-white">Hey, I'm </span>
-            <span className="gradient-text text-glow">Thowfeeq Ahmad</span>
+            <span className="gradient-text ">Thowfeeq Ahmad</span>
           </motion.h1>
 
           <motion.div
@@ -97,7 +96,7 @@ const Hero = () => {
             >
               {roles[currentRole]}
             </motion.span>
-            <span className="text-gray-300 ml-3">& Visionary</span>
+            <span className="text-gray-300 ml-3"></span>
           </motion.div>
 
           <motion.p
@@ -138,21 +137,6 @@ const Hero = () => {
                 <span>View Projects</span>
               </div>
             </motion.button>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="text-neon-cyan cursor-pointer"
-          >
-            <ChevronDown className="w-8 h-8" />
           </motion.div>
         </motion.div>
       </div>
